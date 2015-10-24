@@ -26,4 +26,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
     assert is_logged_in?
   end
+
+  #test "user accessing url, should be redirected when logged in" do
+  #  get edit_user_path
+  #end
 end
