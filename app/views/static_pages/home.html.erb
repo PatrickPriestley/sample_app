@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <% if logged_in? %>
+<aside>
   <div class="row">
-    <aside class="col-md-4">
-      <%= render 'shared/user_info' %>
-    </section>
-    </aside>
+    <div class="center col-sm-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">Value Averaging</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= link_to "Create new portfolio", value_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <div class="center col-sm-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">Dollar Cost Averaging</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= link_to "Create new portfolio", dollarcost_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <div class="center col-sm-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">Dogs of the Dow</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= link_to "Create new portfolio", dogs_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
   </div>
+</aside>
+
 <% else %>
   <div class="center jumbotron">
     <h1>Investing Test</h1>
