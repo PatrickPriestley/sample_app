@@ -1,9 +1,11 @@
 class ValuePortfoliosController < ApplicationController
+  before_action :logged_in_user, only: [:show, :create, :new]
+  #before_action :correct_user,   only: [:show, :new]
 
   def show
     @value_portfolio = ValuePortfolio.find(params[:id])
   end
-  
+
   def new
   end
 
