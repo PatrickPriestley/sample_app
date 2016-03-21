@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initial_investment: 
+  investment_increase: 
+  share_price: MyString
+
+two:
+  initial_investment: 
+  investment_increase: 
+  share_price: MyString
