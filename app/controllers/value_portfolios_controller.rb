@@ -1,6 +1,6 @@
 class ValuePortfoliosController < ApplicationController
   before_action :logged_in_user, only: [:show, :create, :new]
-  before_action :correct_user,   only: :destroy
+  before_action :correct_user,   only: [:show, :destroy]
 
   def show
     @value_portfolio = ValuePortfolio.find(params[:id])
@@ -25,7 +25,7 @@ class ValuePortfoliosController < ApplicationController
   end
 
   def correct_user
-      @value_portfolio = current_user.value_portfolios.find_by(id: params[:id])
-      redirect_to root_url if @value_portfolio.nil?
+      @user = current_user.value_portfolios.find_by(id: params[:id])
+      redirect_to root_url if @user.nil?
   end
 end
