@@ -28,23 +28,16 @@ ActiveRecord::Schema.define(version: 20160321232012) do
     t.datetime "reset_sent_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-
-  create_table "value_averagings", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "value_averagings", ["user_id"], name: "index_value_averagings_on_user_id"
-
   create_table "value_portfolios", force: :cascade do |t|
     t.string   "initial_investment"
     t.string   "investment_increase"
     t.string   "share_price"
+    t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
+
+  add_index "value_portfolios", ["user_id", "created_at"], name: "index_value_portfolios_on_user_id_and_created_at"
+  add_index "value_portfolios", ["user_id"], name: "index_value_portfolios_on_user_id"
 
 end

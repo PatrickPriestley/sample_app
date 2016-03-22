@@ -4,8 +4,10 @@ class CreateValuePortfolios < ActiveRecord::Migration
       t.string :initial_investment
       t.string :investment_increase
       t.string :share_price
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
+    add_index :value_portfolios, [:user_id, :created_at]
   end
 end
