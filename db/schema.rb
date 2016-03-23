@@ -29,9 +29,11 @@ ActiveRecord::Schema.define(version: 20160321232012) do
   end
 
   create_table "value_portfolios", force: :cascade do |t|
+    t.string   "portfolio_name"
     t.string   "initial_investment"
     t.string   "investment_increase"
     t.string   "share_price"
+    t.string   "commission_paid"
     t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false

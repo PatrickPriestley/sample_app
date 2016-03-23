@@ -7,6 +7,7 @@ class ValuePortfoliosController < ApplicationController
   end
 
   def new
+    @value_portfolio = ValuePortfolio.new
   end
 
   def create
@@ -15,13 +16,13 @@ class ValuePortfoliosController < ApplicationController
       flash[:success] = "Value Portfolio created!"
       redirect_to @value_portfolio
     else
-      render 'static_pages/home'
+      render 'new'
     end
   end
 
   private
   def value_portfolio_params
-    params.require(:value_portfolio).permit(:initial_investment, :investment_increase, :share_price)
+    params.require(:value_portfolio).permit(:portfolio_name, :initial_investment, :investment_increase, :share_price, :commission_paid)
   end
 
   def correct_user

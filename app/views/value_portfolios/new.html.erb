@@ -1,20 +1,8 @@
+<% provide(:button_text, 'Create Portfolio') %>
 <h1>Enter value averaging information</h1>
 
-<%= form_for :value_portfolio, url: value_portfolios_path do |f| %>
-
-  <p>
-    <%= f.label :initial_investment %><br>
-    <%= f.text_field :initial_investment %>
-  </p>
-  <p>
-    <%= f.label :investment_increase %><br>
-    <%= f.text_field :investment_increase %>
-  </p>
-  <p>
-    <%= f.label :share_price %><br>
-    <%= f.text_field :share_price %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'value_portfolios/form' %>
+  </div>
+</div>
