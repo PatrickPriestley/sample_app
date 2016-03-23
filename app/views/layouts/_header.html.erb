@@ -191,7 +191,8 @@
         <li><a <%= link_to "Log out", logout_path, method: "delete" %></a></li>
       </ul>
     <% else %>
-    <ul class="nav navbar-nav navbar-right">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
         <li><a <%= link_to "Log in", login_path %></a></li>
     </ul>
     <% end %>
