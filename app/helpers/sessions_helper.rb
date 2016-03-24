@@ -30,6 +30,10 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def has_portfolios?
+    !@value_portfolio.nil?
+  end
+
   # Forgets a persistent session.
   def forget(user)
     user.forget

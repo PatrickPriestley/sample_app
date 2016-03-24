@@ -1,7 +1,9 @@
 class StaticPagesController < ApplicationController
 
   def home
-    @value_portfolio = current_user.value_portfolios.build if logged_in?
+    if logged_in?
+      @value_portfolio = current_user.value_portfolios.all
+    end
   end
 
   def about

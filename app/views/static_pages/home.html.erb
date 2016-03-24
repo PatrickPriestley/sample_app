@@ -1,18 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<body>
+
 <% if logged_in? %>
-<aside>
-  <div class="row">
-    <div class="center col-sm-4">
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">Value Averaging</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <%= link_to "Create new portfolio", new_value_portfolio_path, class:"btn btn-primary" %>
-        </div>
-      </div>
-    </div>
-  </div>
-</aside>
+<h3>Listing Portfolios</h3>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Portfolio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @value_portfolio.each do |value_portfolio| %>
+      <tr>
+        <td><%= value_portfolio.portfolio_name %></td>
+        <td><%= link_to 'View Portfolio', value_portfolio_path(value_portfolio) %></td>
+      </tr>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>
+</body>
+</html>
+
+<div class="button">
+<%= link_to "Create New Portfolio", select_path, class: "btn btn-lg btn-default" %>
+</div>
+
 <% else %>
   <div class="center jumbotron">
     <h1>Investing Test</h1>
@@ -21,6 +41,6 @@
       This is test
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-default" %>
   </div>
 <% end %>

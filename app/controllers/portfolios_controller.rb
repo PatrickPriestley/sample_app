@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
 
-  def select
+  def show
   end
+
 end
