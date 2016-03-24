@@ -320,6 +320,7 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
     will_paginate (3.0.7)
     xml-simple (1.1.5)
+    yahoo-finance (1.0.0)
 
 PLATFORMS
   ruby
@@ -351,3 +352,7 @@ DEPENDENCIES
   uglifier (= 2.5.3)
   web-console (= 2.0.0.beta3)
   will_paginate (= 3.0.7)
+  yahoo-finance
+
+BUNDLED WITH
+   1.10.6
