@@ -22,7 +22,7 @@ class ValuePortfoliosController < ApplicationController
 
   private
   def value_portfolio_params
-    params.require(:value_portfolio).permit(:portfolio_name, :initial_investment, :investment_increase, :share_price, :commission_paid)
+    params.require(:value_portfolio).permit(:portfolio_name, :initial_investment, :investment_increase, :share_price, :commission_paid, :date_of_trade)
   end
 
   def correct_user

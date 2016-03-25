@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <body>
 
 <h1> <%= @value_portfolio.portfolio_name %> </h1>
@@ -25,13 +21,134 @@
     </thead>
     <tbody>
       <tr>
-        <td>Jan 1</td>
+        <td><%= @value_portfolio.date_of_trade %></td>
         <td><%= @value_portfolio.share_price %></td>
-        <td>$1000</td>
-        <td>$1500</td>
-        <td>10</td>
-        <td>--</td>
-        <td>10</td>
+        <td><%= @value_portfolio.share_price.to_i * (@value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i) - @value_portfolio.commission_paid.to_i %></td>
+        <td></td>
+        <td><%= @value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i %></td>
+        <td><%= @value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i %></td>
+        <td><%= @value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i %></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Feb 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Mar 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Apr 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>May 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>June 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>July 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Aug 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Sep 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Oct 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Nov 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>Dec 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

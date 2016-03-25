@@ -13,5 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-datepicker
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $('#value_portfolio_date_of_trade').datepicker();
+});
